@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Csere</title>
+</head>
+
+<body style="text-align: center;">
+    <h1>Csere program</h1>
+    <img id="kep" src="img/kor.webp" width="200px" onclick="kepcsere()">
+    <script>
+        let valt = 0;
+        function kepcsere() {
+            if (valt == 0) { document.getElementById('kep').src = "img/haromszog.png"; valt = 1; }
+            else { document.getElementById('kep').src = "img/kor.webp"; valt = 0; }
+        }
+        function hattercsere() {
+            document.body.style.backgroundColor = "red";
+        }
+    </script>
+</body>
+
+</html>

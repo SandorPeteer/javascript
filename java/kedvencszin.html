@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kedvenc szín</title>
+</head>
+
+<body>
+    <h1>Színválasztó JavaScript</h1>
+    <form action="javascript:void(0)">
+        <fieldset>
+            <label for="szin">Válaszd ki a kedvenc színed!</label>
+            <br>
+            <input type="color" name="színválasztó" id="szin" value="#BB00FF">
+            <input type="button" value="KATT" name="színválasztó" id="katt" onclick="szinez()">
+        </fieldset>
+        <fieldset>
+            <label for="hatter">Válaszd ki a kedvenc háttér színed!</label>
+            <br>
+            <input type="color" name="színválasztó" id="hatter" value="#4BFF1A">
+            <input type="button" value="KATT" name="színválasztó" id="katt" onclick="hatterszin()">
+        </fieldset>
+        <fieldset>
+            <label for="nev">Mi a neved?</label>
+            <br>
+            <input type="text" name="neve" id="nev" onchange="nevki()" placeholder="név">
+        </fieldset>
+    </form>
+    <p id="neved" style="text-align: center;"></p>
+    <script>
+        function szinez() {
+            document.body.style.color = szin.value;
+        }
+        function hatterszin() {
+            document.body.style.backgroundColor = hatter.value;
+        }
+        function nevki(){
+            document.getElementById("neved").innerHTML = "Helló " + nev.value + "!";
+        }
+    </script>
+</body>
+
+</html>

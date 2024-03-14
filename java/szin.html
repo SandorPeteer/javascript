@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>színezés JavaScript-el</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Válaszd ki a kedvenc színed!</h1>
+    <input style="margin-left: auto; margin-right: auto; display: block; width: 75%; height: 30vh;" 
+    type="color" name="szinecske" id="szin" onchange="colorChange()">
+    <br>
+    <input style="margin-left: auto; margin-right: auto; display: block;" type="button" value="Kattints ide!" onclick="kiir()">
+
+    <p style="text-align: center; font-weight: bold; font-size: 5vh;" id="irdki"> ide fog kiiratódni a szöveg...</p>
+
+    <script>
+
+        function colorChange() {
+            document.body.style.color = szin.value;
+        }
+
+        function kiir(){
+            document.getElementById("irdki").innerHTML = "Sándor Péter";
+        }
+    </script>
+
+</body>
+</html>

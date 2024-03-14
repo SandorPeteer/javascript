@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KOSÁR</title>
+</head>
+
+<body onload="frissit()">
+
+    <input type="button" value="-" onclick="kenyer_db.value = Number(kenyer_db.value)-1">
+    <input type="text" id="kenyer_db" value="1">
+    <input type="button" value="+" onclick="kenyer_db.value = Number(kenyer_db.value)+1">
+    <input type="submit" value="KOSÁRBA" onclick="ad('kenyer_darab', kenyer_db.value); frissit()">
+    <br>
+
+    <p>KENYÉR ÁRA: <span style="color: red;" id="kenyer_ar">...Ft</span></p>
+
+    <input type="button" value="-" onclick="tej_db.value = Number(tej_db.value)-1">
+    <input type="text" id="tej_db" value="1">
+    <input type="button" value="+" onclick="tej_db.value = Number(tej_db.value)+1">
+    <input type="submit" value="KOSÁRBA" onclick="ad('tej_darab', tej_db.value); frissit()">
+    <br>
+
+    <p>TEJ ÁRA: <span style="color: red;" id="tej_ar">...Ft</span></p>
+
+    <script>
+
+        var _kenyer = 550;
+        var _tej = 333;
+
+        function frissit() {
+            document.getElementById('kenyer_ar').innerText = _kenyer * localStorage.getItem('kenyer_darab') + " Ft";
+            document.getElementById('tej_ar').innerText = _kenyer * localStorage.getItem('tej_darab') + " Ft";
+        }
+
+        function ad(nev, ertek) {
+            localStorage.setItem(nev, ertek);
+        }
+
+    </script>
+
+</body>
+
+</html>

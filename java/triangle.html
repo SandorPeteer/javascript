@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HÁROMSZÖG RAJZOLÁS</title>
+    <style>
+        #haromszog {
+            border-top: 200px solid transparent;
+            border-left: 100px solid rgb(1, 107, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HÁROMSZÖG RAJZOLÁS PROGRAM</h1>
+    <form action="javascript:void(0)">
+        <fieldset>
+            <legend>Add meg a háromszög befogóit:</legend>
+            <label for="a_oldal">a oldal:</label>
+            <input type="number" name="sz" id="a_oldal" oninput="rajzol()">
+            <br>
+            <label for="b_oldal">b oldal:</label>
+            <input type="number" name="sz" id="b_oldal" oninput="rajzol()">
+            <br>
+            <label for="szin">SZÍN:</label>
+            <input type="color" name="szín" id="szin" oninput="rajzol()">
+            <div id="haromszog"></div>
+        </fieldset>
+    </form>
+
+    <script>
+        function rajzol() {
+            const haromsz = document.getElementById('haromszog');
+            haromsz.style = "border-top: " + a_oldal.value + "px solid transparent;"
+                          + "border-left:" + b_oldal.value + "px solid" + szin.value + ";"
+        }
+
+    </script>
+</body>
+
+</html>

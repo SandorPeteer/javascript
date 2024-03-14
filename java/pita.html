@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitagorasz számoló feladat</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nosifer&display=swap');
+
+        .font1 {
+            font-family: 'Nosifer', cursive;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="font1">Pitagorasz tétel számoló</h1>
+
+    <img src="img/pita.avif" alt="Derékszögű háromszög">
+
+    <form action="javascript:void(0)">
+        <fieldset style="width: 50%;">
+            <br>
+            <legend>Adj meg legalább két oldalt!</legend>
+            <label for="a">a oldal:</label>
+            <input class="font1" type="text" name="pit" id="a" oninput="szamol()"><br>
+            <label for="b">b oldal:</label>
+            <input class="font1" type="text" name="pit" id="b" oninput="szamol()"><br>
+            <label for="c">c oldal:</label>
+            <input class="font1" type="text" name="pit" id="c" oninput="szamol()"><br><br>
+            <input type="button" name="pit" value="TÖRLÉS" onclick="torles()">
+        </fieldset>
+    </form>
+
+    <script>
+        function szamol() {
+            if (a.value != 0 && b.value != 0) {
+                c.value = Math.sqrt((a.value * a.value) + (b.value * b.value));
+                document.getElementById("c").style.color = "red";
+            }
+            else if (a.value != 0 && c.value != 0) {
+                b.value = Math.sqrt((c.value * c.value) - (a.value * a.value));
+                document.getElementById("b").style.color = "red";
+            }
+            else if (b.value != 0 && c.value != 0) {
+                a.value = Math.sqrt((c.value * c.value) - (b.value * b.value));
+                document.getElementById("a").style.color = "red";
+            }
+
+        }
+        function torles() {
+            a.value = "";
+            b.value = "";
+            c.value = "";
+            document.location.reload();
+        }
+    </script>
+</body>
+
+</html>

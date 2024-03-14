@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+
+<body>
+
+    <input type="button" value="Összead" onclick="osszead()">
+
+    <script>
+
+        function osszead() {
+
+            let szam1;
+            let szam2;
+            let eredmeny;
+
+            szam1 = Number(prompt("Add meg az egyik számot: "));
+
+            while (Number.isNaN(szam1)) {
+                szam1 = Number(prompt("Szám1 = Csak számot írhatsz be!"));
+            }
+
+            szam2 = Number(prompt("Add meg a másik számot: "));
+
+            while (Number.isNaN(szam2)) {
+                szam2 = Number(prompt("Szám2 = Csak számot írhatsz be!"));
+            }
+
+            eredmeny = szam1 + szam2;
+            alert("A két szám összege " + eredmeny);
+
+        }
+
+    </script>
+
+</body>
+
+</html>

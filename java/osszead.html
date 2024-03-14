@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>osszead</title>
+</head>
+
+<body>
+
+    <input type="button" value="ÖSSZEADÁS" onclick="osszead()">
+    <input type="button" value="SZORZÁS" onclick="szor()">
+    <input type="button" value="KIVONÁS" onclick="kiv()">
+    <input type="button" value="OSZTÁS" onclick="oszt()">
+
+    <script>
+        function osszead() {
+            let szam1, szam2, eredmeny;
+
+            szam1 = Number(prompt("Egyik szám?"));
+            while (Number.isNaN(szam1)) {
+                szam1 = Number(prompt("SZÁM1-hez SZÁMOT ÍRJ MÁR BEEE!"));
+            }
+
+            szam2 = Number(prompt("Másik szám?"));
+
+            while (Number.isNaN(szam2)) {
+                szam2 = Number(prompt("SZÁM2-hőz SZÁMOT ÍRJ MÁR BEEE!"));
+            }
+
+            eredmeny = szam1 + szam2;
+            console.log(eredmeny);
+            alert("A két szám összege: " + eredmeny);
+        }
+        function szor() {
+            let szam1, szam2, eredmeny;
+
+            szam1 = Number(prompt("Egyik szám?"));
+            while (Number.isNaN(szam1)) {
+                szam1 = Number(prompt("SZÁM1-hez SZÁMOT ÍRJ MÁR BEEE!"));
+            }
+
+            szam2 = Number(prompt("Másik szám?"));
+
+            while (Number.isNaN(szam2)) {
+                szam2 = Number(prompt("SZÁM2-hőz SZÁMOT ÍRJ MÁR BEEE!"));
+            }
+
+            eredmeny = szam1 * szam2;
+            console.log(eredmeny);
+            alert("A két szám összege: " + eredmeny);
+        }
+        function kiv() {
+            let szam1, szam2, eredmeny;
+
+            szam1 = Number(prompt("Egyik szám?"));
+            while (Number.isNaN(szam1)) {
+                szam1 = Number(prompt("SZÁM1-hez SZÁMOT ÍRJ MÁR BEEE!"));
+            }
+
+            szam2 = Number(prompt("Másik szám?"));
+
+            while (Number.isNaN(szam2)) {
+                szam2 = Number(prompt("SZÁM2-hőz SZÁMOT ÍRJ MÁR BEEE!"));
+            }
+
+            eredmeny = szam1 - szam2;
+            console.log(eredmeny);
+            alert("A két szám összege: " + eredmeny);
+        }
+        function oszt() {
+            let szam1, szam2, eredmeny;
+
+            szam1 = Number(prompt("Egyik szám?"));
+            while (Number.isNaN(szam1)) {
+                szam1 = Number(prompt("SZÁM1-hez SZÁMOT ÍRJ MÁR BEEE!"));
+            }
+
+            szam2 = Number(prompt("Másik szám?"));
+
+            while (Number.isNaN(szam2)) {
+                szam2 = Number(prompt("SZÁM2-hőz SZÁMOT ÍRJ MÁR BEEE!"));
+            }
+
+            eredmeny = szam1 / szam2;
+            console.log(eredmeny);
+            alert("A két szám összege: " + eredmeny);
+        }
+    </script>
+
+</body>
+
+</html>
